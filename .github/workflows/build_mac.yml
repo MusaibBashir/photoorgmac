@@ -35,21 +35,25 @@ jobs:
 
     - name: Build with PyInstaller
       run: |
-        # Define Icon Command based on file existence
+        # Define Icon Command
         if [ "${{ steps.check_icon.outputs.has_icon }}" == "true" ]; then
-          # Mac uses colon separator for add-data
           ICON_CMD='--icon=app_icon.icns --add-data=app_icon.png:.'
         else
           ICON_CMD=""
         fi
         
-        # Build command
-        # --windowed creates a .app bundle (no terminal window)
-        # --onefile creates a single executable inside the bundle
-        pyinstaller --noconsole --onefile --name "SmartShootOrganizer" $ICON_CMD photo_organizer.py
+        # CHANGED: Removed --onefile, Added --onedir and --windowed
+        # This creates a .app bundle which starts much faster
+        pyinstaller --noconsole --onedir --windowed --name "SmartShootOrganizer" $ICON_CMD photo_organizer.py
+
+    # Step to zip the .app bundle so it downloads cleanly
+    - name: Zip the App
+      run: |
+        cd dist
+        zip -r SmartShootOrganizer-Mac.zip SmartShootOrganizer.app
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
       with:
-        name: SmartShootOrganizer-Mac
-        path: dist/SmartShootOrganizer
+        name: SmartShootOrganizer-Mac-App
+        path: dist/SmartShootOrganizer-Mac.zip
