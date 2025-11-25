@@ -26,7 +26,7 @@ except ImportError:
 class PhotoOrganizerApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Smart Media Organizer | Musaib Bin Bashir")
+        self.root.title("Smart Shoot Organizer | Musaib Bin Bashir")
         self.root.geometry("1250x900")
 
         if not HAS_PIL:
