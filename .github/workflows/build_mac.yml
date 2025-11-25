@@ -46,10 +46,10 @@ jobs:
         # Build command
         # --windowed creates a .app bundle (no terminal window)
         # --onefile creates a single executable inside the bundle
-        pyinstaller --noconsole --onefile --name "SmartMediaOrganizer" $ICON_CMD photo_organizer.py
+        pyinstaller --noconsole --onefile --name "SmartShootOrganizer" $ICON_CMD photo_organizer.py
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
       with:
-        name: SmartMediaOrganizer-Mac
-        path: dist/SmartMediaOrganizer
+        name: SmartShootOrganizer-Mac
+        path: dist/SmartShootOrganizer
