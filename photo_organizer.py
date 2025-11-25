@@ -74,7 +74,7 @@ class PhotoOrganizerApp:
         
         # Tab 2: Smart Renamer (New)
         self.tab_renamer = ttk.Frame(self.notebook)
-        self.notebook.add(self.tab_renamer, text="Smart Renamer")
+        self.notebook.add(self.tab_renamer, text="Smart Group & Renamer")
         self.init_smart_rename_tab()
 
         # Tab 3: Sequence Sorter
@@ -338,7 +338,7 @@ Shortcuts:
 - Scroll Wheel: Zoom In/Out
 - Click & Drag: Pan zoomed image
 
-TAB 2: SMART RENAMER
+TAB 2: SMART GROUP & RENAMER
 -----------------------------------------
 Purpose: Sort photos/videos into numbered groups and batch rename them chronologically.
 
