@@ -280,8 +280,9 @@ class PhotoOrganizerApp:
         self.root.bind("<Right>", lambda e: self.handle_shortcut('right'))
         
         # Grouping Shortcuts (Ctrl+1 to Ctrl+5)
+        modifier = "Command" if sys.platform == "darwin" else "Control"
         for i in range(1, 6):
-            self.root.bind(f"<Control-Key-{i}>", lambda e, n=i: self.handle_shortcut(str(n)))
+            self.root.bind(f"<{modifier}-Key-{i}>", lambda e, n=i: self.handle_shortcut(str(n)))
 
     def handle_shortcut(self, key):
         # Determine active tab
