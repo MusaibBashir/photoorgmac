@@ -188,7 +188,7 @@ class PhotoOrganizerApp:
         f_lbl.pack(side="right", padx=10)
         
         self.var_current_label = tk.StringVar(value="Unmarked")
-        self.colors = {"Green": "#90EE90", "Yellow": "#FFFF99", "Red": "#FFcccb", "Unmarked": "#e0e0e0"}
+        self.colors = {"Green": "#2F8026", "Yellow": "#E5D222", "Red": "#AB0000", "Unmarked": "#e0e0e0"}
 
         tk.Radiobutton(f_lbl, text="Unmarked", variable=self.var_current_label, value="Unmarked", command=self.save_label, indicatoron=0, width=8).pack(side="left", padx=2)
         tk.Radiobutton(f_lbl, text="Green", variable=self.var_current_label, value="Green", command=self.save_label, indicatoron=0, width=6, bg=self.colors["Green"], selectcolor=self.colors["Green"]).pack(side="left", padx=2)
@@ -290,6 +290,15 @@ class PhotoOrganizerApp:
             if key == 'p': self.open_current_file()
             elif key == 'left': self.prev_image()
             elif key == 'right': self.next_image()
+            elif key == '1':
+                self.var_current_label.set("Green")
+                self.save_label()
+            elif key == '2':
+                self.var_current_label.set("Yellow")
+                self.save_label()
+            elif key == '3':
+                self.var_current_label.set("Red")
+                self.save_label()
         elif current_tab == 1: # Smart Renamer
             if key == 'p': self.open_current_renamer()
             elif key == 'left': self.prev_image_renamer()
@@ -331,6 +340,9 @@ Instructions:
 5. Click 'SORT NOW' to execute moves/deletes.
 
 Shortcuts:
+- Ctrl + 1: Mark as Green
+- Ctrl + 2: Mark as Yellow
+- Ctrl + 3: Mark as Red (Delete)
 - Left Arrow: Previous Image
 - Right Arrow: Next Image
 - P: Open file in default viewer (or VLC for video)
