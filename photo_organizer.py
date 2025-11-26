@@ -340,10 +340,10 @@ Instructions:
    - Red: PERMANENTLY DELETES the file from disk.
 5. Click 'SORT NOW' to execute moves/deletes.
 
-Shortcuts (On MacOS use Command instead of Ctrl key):
-- Ctrl + 1: Mark as Green
-- Ctrl + 2: Mark as Yellow
-- Ctrl + 3: Mark as Red (Delete)
+Shortcuts:
+- Cmd + 1: Mark as Green
+- Cmd + 2: Mark as Yellow
+- Cmd + 3: Mark as Red (Delete)
 - Left Arrow: Previous Image
 - Right Arrow: Next Image
 - P: Open file in default viewer (or VLC for video)
@@ -365,12 +365,12 @@ Instructions:
 7. Select Action: Rename (Default), Move to new folder, or Copy to new folder.
 8. Result: 'Transit_001.mov' or 'Transit_001_FX30.mov'.
 
-Shortcuts (On MacOS use Command instead of Ctrl key):
-- Ctrl + 1: Assign to Group 1
-- Ctrl + 2: Assign to Group 2
-- Ctrl + 3: Assign to Group 3
-- Ctrl + 4: Assign to Group 4
-- Ctrl + 5: Assign to Group 5
+Shortcuts:
+- Cmd + 1: Assign to Group 1
+- Cmd + 2: Assign to Group 2
+- Cmd + 3: Assign to Group 3
+- Cmd + 4: Assign to Group 4
+- Cmd + 5: Assign to Group 5
 - Left/Right/P: Navigation and Open
 
 TAB 3: SEQUENCE SORTER
@@ -392,6 +392,7 @@ GENERAL NOTES
 Credits:
 -----------------------------------------
 - Developed by Musaib Bin Bashir
+- musaibbashir02@gmail.com
 - By TFPS for TFPS
 - www.tfps.site
 """
