@@ -340,7 +340,7 @@ Instructions:
    - Red: PERMANENTLY DELETES the file from disk.
 5. Click 'SORT NOW' to execute moves/deletes.
 
-Shortcuts:
+Shortcuts (On MacOS use Command instead of Ctrl key):
 - Ctrl + 1: Mark as Green
 - Ctrl + 2: Mark as Yellow
 - Ctrl + 3: Mark as Red (Delete)
@@ -365,7 +365,7 @@ Instructions:
 7. Select Action: Rename (Default), Move to new folder, or Copy to new folder.
 8. Result: 'Transit_001.mov' or 'Transit_001_FX30.mov'.
 
-Shortcuts:
+Shortcuts (On MacOS use Command instead of Ctrl key):
 - Ctrl + 1: Assign to Group 1
 - Ctrl + 2: Assign to Group 2
 - Ctrl + 3: Assign to Group 3
